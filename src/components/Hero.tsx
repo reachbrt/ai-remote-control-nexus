@@ -5,7 +5,7 @@ import { Play, ArrowRight, Zap, Shield, Globe, Download, MousePointer, Eye, Comm
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 pt-20">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 pt-16">
       {/* Advanced Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8 animate-fade-in">

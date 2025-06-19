@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronDown, Brain } from 'lucide-react';
+import { Menu, X, Brain } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,21 +9,21 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200/50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18">
+        <div className="flex justify-between items-center h-16">
           {/* Enhanced Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <div className="flex items-center space-x-3">
                 <div className="relative group">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover:rotate-3 transition-all duration-300">
-                    <div className="w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">RT</span>
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover:rotate-3 transition-all duration-300">
+                    <div className="w-6 h-6 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">RT</span>
                     </div>
                   </div>
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full animate-pulse"></div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full animate-pulse"></div>
                 </div>
                 <div>
-                  <span className="text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                  <span className="text-lg font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
                     RemoteTask AI
                   </span>
                   <div className="text-xs text-gray-500">Desktop Professional</div>
@@ -34,13 +34,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <div className="relative group">
-                <button className="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-                  Product
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-              </div>
+            <div className="flex items-center space-x-8">
               <a href="#features" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors hover:scale-105 transform duration-200">
                 AI Features
               </a>
