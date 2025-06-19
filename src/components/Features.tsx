@@ -2,42 +2,43 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
-  Brain, 
-  Mic, 
-  Monitor, 
+  Eye, 
+  MousePointer, 
+  Command, 
   Shield, 
   Zap, 
   Globe, 
   Smartphone, 
-  Lock,
+  Monitor,
   Users,
   BarChart3,
   FileText,
   Clock,
   Download,
-  Settings
+  Settings,
+  TouchpadIcon as Touchpad
 } from 'lucide-react';
 
 const Features = () => {
   const mainFeatures = [
     {
-      icon: Brain,
-      title: 'AI-Powered Commands',
-      description: 'Natural language processing for intuitive remote control. Say "open calculator" or "take screenshot" and watch it happen.',
+      icon: Eye,
+      title: 'AI Vision Control',
+      description: 'Advanced computer vision that sees and understands your screen. AI identifies buttons, forms, and interface elements for precise control.',
       gradient: 'from-blue-500 to-cyan-500',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
-      icon: Globe,
-      title: 'Global Connectivity',
-      description: 'Connect from anywhere without complex network setup. WebSocket global network ensures reliable real-time communication.',
+      icon: MousePointer,
+      title: 'Smart Mouse & Touch Control',
+      description: 'Intelligent mouse control with AI-powered clicking, dragging, and touchpad gestures. Control any desktop with natural mobile interactions.',
       gradient: 'from-purple-500 to-pink-500',
-      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'End-to-end AES-256 encryption, multi-factor authentication, and comprehensive audit trails for enterprise compliance.',
+      icon: Command,
+      title: 'AI Agent Task Automation',
+      description: 'Voice and text commands that execute complex tasks. Say "login to my email" and watch AI navigate, click, and complete the entire workflow.',
       gradient: 'from-emerald-500 to-teal-500',
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     }
@@ -46,33 +47,33 @@ const Features = () => {
   const secondaryFeatures = [
     {
       icon: Monitor,
-      title: 'Cross-Platform Support',
-      description: 'Windows, macOS, and Linux compatibility'
+      title: 'Cross-Platform Desktop',
+      description: 'Windows, macOS, and Linux support'
+    },
+    {
+      icon: Touchpad,
+      title: 'Mobile Touchpad Mode',
+      description: 'Transform phone into intelligent touchpad'
     },
     {
       icon: Smartphone,
-      title: 'Mobile App Control',
-      description: 'Control desktops from any mobile device'
-    },
-    {
-      icon: Users,
-      title: 'Enterprise Deployment',
-      description: 'MSI, DMG, and AppImage installers'
+      title: 'Voice Command Control',
+      description: 'Natural language voice commands'
     },
     {
       icon: Settings,
-      title: 'System Tray Integration',
-      description: 'Background operation and auto-start'
+      title: 'AI Task Automation',
+      description: 'Complex workflow automation'
     },
     {
       icon: FileText,
-      title: 'Activity Logging',
-      description: 'Comprehensive audit trail and compliance'
+      title: 'Screen Recognition',
+      description: 'AI understands UI elements and context'
     },
     {
       icon: Download,
-      title: 'Auto-Update System',
-      description: 'Seamless updates with zero downtime'
+      title: 'Instant Setup',
+      description: 'Zero configuration remote access'
     }
   ];
 
@@ -81,19 +82,19 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-medium mb-4">
             <Zap className="w-4 h-4 mr-2" />
-            Professional Features
+            AI-Powered Features
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Everything you need for
+            The future of
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              professional remote control
+              remote desktop control
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            RemoteTask AI Desktop Professional combines cutting-edge artificial intelligence with enterprise-grade 
-            remote desktop technology for professional and business use.
+            RemoteTask AI combines advanced computer vision, natural language processing, and intelligent automation 
+            to create the most intuitive remote desktop experience ever built.
           </p>
         </div>
 
@@ -120,33 +121,39 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Technical Specifications */}
-        <div className="bg-gray-50 rounded-3xl p-12 mb-16">
+        {/* AI Capabilities Showcase */}
+        <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-12 mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">System Requirements</h3>
-            <p className="text-lg text-gray-600">Professional-grade specifications for optimal performance</p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">AI Vision & Control Capabilities</h3>
+            <p className="text-lg text-gray-600">Experience the power of artificial intelligence in remote desktop control</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Minimum Requirements</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <Eye className="w-6 h-6 mr-2 text-blue-600" />
+                Vision Recognition
+              </h4>
               <ul className="space-y-2 text-gray-600">
-                <li>• OS: Windows 10, macOS 10.14, Ubuntu 18.04</li>
-                <li>• RAM: 4GB minimum, 8GB recommended</li>
-                <li>• Storage: 500MB available space</li>
-                <li>• Network: Broadband internet connection</li>
-                <li>• Display: 1024x768 minimum resolution</li>
+                <li>• Identifies buttons, forms, and UI elements</li>
+                <li>• Understands screen context and layout</li>
+                <li>• Recognizes text, images, and interactive areas</li>
+                <li>• Adapts to different applications and websites</li>
+                <li>• Real-time screen analysis and mapping</li>
               </ul>
             </div>
             
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Recommended Specs</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <Command className="w-6 h-6 mr-2 text-purple-600" />
+                AI Agent Tasks
+              </h4>
               <ul className="space-y-2 text-gray-600">
-                <li>• OS: Windows 11, macOS 12+, Ubuntu 20.04+</li>
-                <li>• RAM: 16GB for optimal performance</li>
-                <li>• Storage: 1GB available space</li>
-                <li>• Network: High-speed internet (10+ Mbps)</li>
-                <li>• Display: 1920x1080 or higher resolution</li>
+                <li>• "Open Chrome and search for weather"</li>
+                <li>• "Login to my email account"</li>
+                <li>• "Take a screenshot and save it"</li>
+                <li>• "Copy the selected text to clipboard"</li>
+                <li>• "Navigate to settings and change theme"</li>
               </ul>
             </div>
           </div>
@@ -155,8 +162,8 @@ const Features = () => {
         {/* Secondary Features Grid */}
         <div className="bg-gray-50 rounded-3xl p-12">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Professional capabilities</h3>
-            <p className="text-lg text-gray-600">Additional features that make RemoteTask AI the complete enterprise solution</p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Complete Remote Control Suite</h3>
+            <p className="text-lg text-gray-600">Everything you need for intelligent remote desktop management</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

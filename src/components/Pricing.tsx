@@ -2,72 +2,72 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Check, Zap, Crown, Building, Download } from 'lucide-react';
+import { Check, Zap, Crown, Building, Download, Star } from 'lucide-react';
 
 const Pricing = () => {
   const plans = [
     {
-      name: 'Professional',
-      icon: Zap,
+      name: 'Starter',
+      icon: Star,
       price: 'Free',
-      period: 'Open Source',
-      description: 'Full-featured professional remote desktop',
+      period: 'Forever',
+      description: 'Perfect for personal use and small projects',
       features: [
-        'AI-powered natural language commands',
-        'Global connectivity network',
+        'AI-powered remote desktop control',
+        'Basic voice commands and vision',
         'Cross-platform support (Win/Mac/Linux)',
-        'Enterprise-grade security',
-        'System tray integration',
-        'Auto-update system',
-        'Activity logging',
-        'Mobile app control'
+        'Mobile app remote control',
+        'Essential security features',
+        'Community support',
+        'Basic screen recognition',
+        'Standard connection quality'
       ],
-      buttonText: 'Download Windows',
+      buttonText: 'Download Free',
       buttonVariant: 'default' as const,
       popular: true,
       downloads: [
-        { platform: 'Windows', file: 'RemoteTask-AI-Setup-2.0.0.exe' },
-        { platform: 'macOS', file: 'RemoteTask-AI-2.0.0.dmg' },
-        { platform: 'Linux', file: 'RemoteTask-AI-2.0.0.AppImage' }
+        { platform: 'Windows', file: 'RemoteTask-AI-Free-2.0.0.exe' },
+        { platform: 'macOS', file: 'RemoteTask-AI-Free-2.0.0.dmg' },
+        { platform: 'Linux', file: 'RemoteTask-AI-Free-2.0.0.AppImage' }
       ]
+    },
+    {
+      name: 'Professional',
+      icon: Zap,
+      price: '$29',
+      period: '/month',
+      description: 'Advanced AI features for professionals',
+      features: [
+        'Everything in Starter',
+        'Advanced AI vision and recognition',
+        'Complex task automation',
+        'Priority connection servers',
+        'Advanced voice command processing',
+        'Custom AI agent workflows',
+        'Professional support',
+        'Enhanced security features'
+      ],
+      buttonText: 'Start Professional',
+      buttonVariant: 'outline' as const,
+      popular: false
     },
     {
       name: 'Enterprise',
       icon: Building,
       price: 'Custom',
-      period: 'Volume Licensing',
-      description: 'For large organizations and deployments',
+      period: 'Contact Sales',
+      description: 'For large organizations and teams',
       features: [
         'Everything in Professional',
-        'Custom branding and configuration',
-        'Silent installation (MSI/PKG)',
+        'Custom AI model training',
+        'Enterprise-grade security',
         'Centralized management console',
-        'Advanced audit and compliance',
+        'Custom branding and deployment',
         'Priority enterprise support',
-        'Custom integrations',
-        'On-premise deployment options'
+        'On-premise deployment options',
+        'Advanced audit and compliance'
       ],
       buttonText: 'Contact Sales',
-      buttonVariant: 'outline' as const,
-      popular: false
-    },
-    {
-      name: 'Developer',
-      icon: Crown,
-      price: 'Open Source',
-      period: 'MIT License',
-      description: 'Build and customize your own solution',
-      features: [
-        'Full source code access',
-        'MIT license for commercial use',
-        'Build and deployment scripts',
-        'Development documentation',
-        'Community support',
-        'Contribution guidelines',
-        'API documentation',
-        'Custom feature development'
-      ],
-      buttonText: 'View on GitHub',
       buttonVariant: 'outline' as const,
       popular: false
     }
@@ -78,18 +78,18 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-100 to-blue-100 text-green-800 text-sm font-medium mb-4">
             <Download className="w-4 h-4 mr-2" />
-            Download & Licensing
+            Start Free Today
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Choose your deployment
+            Choose your AI
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              option
+              remote control plan
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            RemoteTask AI Desktop Professional is available as a free download with enterprise options for organizations.
+            Start with our free plan and upgrade as your needs grow. Experience the power of AI-driven remote desktop control.
           </p>
         </div>
 
@@ -106,8 +106,8 @@ const Pricing = () => {
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                    Recommended
+                  <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    Most Popular
                   </div>
                 </div>
               )}
@@ -144,7 +144,7 @@ const Pricing = () => {
                       <Button 
                         key={downloadIndex}
                         variant="outline" 
-                        className="w-full py-3 text-sm justify-start"
+                        className="w-full py-3 text-sm justify-start hover:bg-blue-50"
                       >
                         <Download className="w-4 h-4 mr-2" />
                         {download.platform} - {download.file}
