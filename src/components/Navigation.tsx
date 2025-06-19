@@ -1,32 +1,52 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Brain } from 'lucide-react';
+import { Menu, X, Brain, Eye, Smartphone, Monitor } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200/50 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200/50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Enhanced Logo */}
+          {/* Enhanced AI Vision Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <div className="flex items-center space-x-3">
                 <div className="relative group">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover:rotate-3 transition-all duration-300">
-                    <div className="w-6 h-6 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">RT</span>
+                  {/* Main logo container with AI vision theme */}
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-3 transition-all duration-500 relative overflow-hidden">
+                    {/* Animated background pattern */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-cyan-400/20 animate-pulse"></div>
+                    
+                    {/* Mobile to laptop connection visual */}
+                    <div className="relative z-10 flex items-center justify-center w-full h-full">
+                      <div className="flex items-center space-x-1">
+                        <Smartphone className="w-3 h-3 text-white/90" />
+                        <div className="w-2 h-0.5 bg-gradient-to-r from-cyan-300 to-blue-300 animate-pulse"></div>
+                        <Monitor className="w-3 h-3 text-white/90" />
+                      </div>
+                    </div>
+                    
+                    {/* AI Vision eye indicator */}
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full flex items-center justify-center animate-pulse">
+                      <Eye className="w-2 h-2 text-white" />
                     </div>
                   </div>
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full animate-pulse"></div>
+                  
+                  {/* Floating connection particles */}
+                  <div className="absolute -top-2 -left-2 w-2 h-2 bg-blue-400 rounded-full opacity-60 animate-bounce"></div>
+                  <div className="absolute -bottom-2 -right-2 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-bounce delay-500"></div>
                 </div>
                 <div>
                   <span className="text-lg font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
                     RemoteTask AI
                   </span>
-                  <div className="text-xs text-gray-500">Desktop Professional</div>
+                  <div className="text-xs text-gray-500 flex items-center space-x-1">
+                    <Eye className="w-3 h-3" />
+                    <span>Vision Control</span>
+                  </div>
                 </div>
               </div>
             </div>
